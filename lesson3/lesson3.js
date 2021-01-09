@@ -1,22 +1,29 @@
-i = 0;
-while(i < 100) {
-    if (i == 99)
-    {
-        document.write(i+1);    
-        break;
-    }
-    else{
-        document.write(i+1, ", ");
-        i++;
-    }
+let numLine = []
+for (let i = 2; i <= 100; i++){
+    numLine.push(true);
 }
 
-for (i = 0; i < 10; i++) alert(i+1);
+let i = 2;
+let resultNumLine = [];
+while(i < 100) {
+    if (numLine[i]){
+        for (let j = i*i; j < 100; j += i){
+            numLine[j] = false;
+        }
+        document.write(i, " ");
+    }
+    i++;
+}
 
-i = 0;
+document.write("<br><br>Task 4:<br>");
+
+for (let i = 0; i < 10; i++) document.write(i+1 + " ");
+
+document.write("<br><br>Task 5 watch in console<br>");
+let step = 0;
 resultString = "*";
 do {
     console.log(resultString);
     resultString += "*";
-    i++;
-}while (i < 20);
+    step++;
+}while (step < 20);
