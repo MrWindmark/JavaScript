@@ -10,3 +10,13 @@ while(i < 100) {
         i++;
     }
 }
+
+for (i = 0; i < 10; i++) alert(i+1);
+
+i = 0;
+resultString = "*";
+do {
+    console.log(resultString);
+    resultString += "*";
+    i++;
+}while (i < 20);
