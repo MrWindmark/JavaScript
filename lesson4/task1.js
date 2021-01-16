@@ -10,7 +10,7 @@ function numConverter() {
     let isnum = /^\d+$/.test(inputStr);
     
     if (isnum) {
-        if(0 < inputStr && inputStr < 999){
+        if(0 < inputStr && inputStr <= 999){
             let myObj = {
                 "сотни": inputStr[inputStr.length - 3] || "0",
                 "десятки": inputStr[inputStr.length - 2] || "0",
